@@ -1,0 +1,342 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="ContactFlow is an embodiment-agnostic action representation for video world models, built from trajectories of 3D contact points."
+    />
+    <meta name="theme-color" content="#f3ff63" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="ContactFlow — Actions through contact" />
+    <meta
+      property="og:description"
+      content="A video action conditioning that transfers across embodiments."
+    />
+    <meta
+      property="og:image"
+      content="https://rpl-bonn.github.io/contactflow/assets/images/droid-contact-flow.jpg"
+    />
+    <meta property="og:url" content="https://rpl-bonn.github.io/contactflow/" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <title>ContactFlow — Actions through contact</title>
+    <script>
+      document.documentElement.classList.add("js");
+    </script>
+    <link rel="icon" href="assets/mark.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="ContactFlow home">
+        <span class="brand-mark" aria-hidden="true">
+          <span></span><span></span><span></span>
+        </span>
+        <span>ContactFlow</span>
+      </a>
+      <nav aria-label="Primary navigation">
+        <a href="#idea">Idea</a>
+        <a href="#results">Results</a>
+        <a href="#resources">Resources</a>
+        <a
+          class="nav-github"
+          href="https://github.com/rpl-bonn/contactflow"
+          target="_blank"
+          rel="noreferrer"
+        >
+          GitHub
+          <span aria-hidden="true">↗</span>
+        </a>
+      </nav>
+    </header>
+
+    <main id="main">
+      <section class="hero" id="top">
+        <div class="hero-copy">
+          <div class="eyebrow">
+            <span class="status-dot" aria-hidden="true"></span>
+            CoRL 2026 submission · Project page under construction
+          </div>
+          <h1>
+            Actions,
+            <br />
+            <span>through contact.</span>
+          </h1>
+          <p class="hero-lede">
+            ContactFlow is an embodiment-agnostic action representation that
+            describes manipulation through trajectories of 3D contact points—
+            shared by hands, grippers, and robots.
+          </p>
+          <div class="hero-actions">
+            <a
+              class="button button-primary"
+              href="https://github.com/rpl-bonn/contactflow"
+              target="_blank"
+              rel="noreferrer"
+            >
+              View repository <span aria-hidden="true">↗</span>
+            </a>
+            <span class="button button-muted" aria-disabled="true">
+              Paper coming soon
+            </span>
+          </div>
+        </div>
+
+        <div class="hero-media">
+          <div class="media-topline">
+            <span>CONTACT CONDITION</span>
+            <span>DROID · 49 FRAMES</span>
+          </div>
+          <img
+            src="assets/images/droid-contact-flow.jpg"
+            alt="A sequence of robot manipulation frames with yellow contact-flow traces."
+          />
+          <div class="media-caption">
+            <span class="trace-key"></span>
+            Contact points trace the intended interaction—not the embodiment.
+          </div>
+        </div>
+      </section>
+
+      <section class="statement reveal" aria-label="Project statement">
+        <p>
+          The same physical intent can look radically different across
+          embodiments.
+        </p>
+        <strong>Contact is the common language.</strong>
+      </section>
+
+      <section class="section idea-section" id="idea">
+        <div class="section-heading reveal">
+          <p class="section-index">01 / The idea</p>
+          <h2>One interface.<br />Many embodiments.</h2>
+          <p>
+            Instead of conditioning a world model on actor-specific appearance
+            or joint commands, ContactFlow isolates where interaction happens
+            and how that interface moves through 3D space.
+          </p>
+        </div>
+
+        <div class="embodiment-grid reveal">
+          <article>
+            <span class="card-number">A</span>
+            <div class="embodiment-icon hand-icon" aria-hidden="true"></div>
+            <h3>Human hands</h3>
+            <p>Learn interaction structure from abundant human demonstrations.</p>
+          </article>
+          <article>
+            <span class="card-number">B</span>
+            <div class="embodiment-icon gripper-icon" aria-hidden="true"></div>
+            <h3>Robot grippers</h3>
+            <p>Express robot plans using the same contact-centric signal.</p>
+          </article>
+          <article>
+            <span class="card-number">C</span>
+            <div class="embodiment-icon dexterous-icon" aria-hidden="true"></div>
+            <h3>New embodiments</h3>
+            <p>Transfer action conditioning without copying actor geometry.</p>
+          </article>
+        </div>
+
+        <div class="pipeline reveal" aria-label="ContactFlow method overview">
+          <div class="pipeline-step">
+            <span>01</span>
+            <strong>Observe</strong>
+            <small>RGB + geometry</small>
+          </div>
+          <div class="pipeline-arrow" aria-hidden="true">→</div>
+          <div class="pipeline-step active">
+            <span>02</span>
+            <strong>Encode contact</strong>
+            <small>3D point trajectories</small>
+          </div>
+          <div class="pipeline-arrow" aria-hidden="true">→</div>
+          <div class="pipeline-step">
+            <span>03</span>
+            <strong>Imagine</strong>
+            <small>Video world model</small>
+          </div>
+          <div class="pipeline-arrow" aria-hidden="true">→</div>
+          <div class="pipeline-step">
+            <span>04</span>
+            <strong>Verify</strong>
+            <small>Predicted outcome</small>
+          </div>
+        </div>
+      </section>
+
+      <section class="section results-section" id="results">
+        <div class="section-heading light reveal">
+          <p class="section-index">02 / Preview</p>
+          <h2>Imagine before<br />you act.</h2>
+          <p>
+            The model receives an initial scene and a ContactFlow condition,
+            then predicts the visual outcome. Each six-second example compares
+            the predicted rollout with the observed future.
+          </p>
+        </div>
+
+        <div class="video-grid">
+          <article class="video-card reveal">
+            <div class="video-label">
+              <span>DROID</span>
+              <span>ROBOT · IN-DOMAIN</span>
+            </div>
+            <video
+              muted
+              loop
+              playsinline
+              preload="metadata"
+              poster="assets/images/droid-rollout.jpg"
+              aria-label="ContactFlow prediction compared with ground truth on DROID."
+            >
+              <source src="assets/videos/droid.mp4" type="video/mp4" />
+            </video>
+            <p>Real robot manipulation</p>
+          </article>
+
+          <article class="video-card reveal">
+            <div class="video-label">
+              <span>RLBENCH</span>
+              <span>ROBOT · UNSEEN</span>
+            </div>
+            <video
+              muted
+              loop
+              playsinline
+              preload="metadata"
+              aria-label="ContactFlow prediction compared with ground truth on RLBench."
+            >
+              <source src="assets/videos/rlbench.mp4" type="video/mp4" />
+            </video>
+            <p>Transfer to simulation</p>
+          </article>
+
+          <article class="video-card reveal">
+            <div class="video-label">
+              <span>TACO</span>
+              <span>HUMAN · HELD-OUT</span>
+            </div>
+            <video
+              muted
+              loop
+              playsinline
+              preload="metadata"
+              aria-label="ContactFlow prediction compared with ground truth on TACO."
+            >
+              <source src="assets/videos/taco.mp4" type="video/mp4" />
+            </video>
+            <p>Human hand interaction</p>
+          </article>
+
+          <article class="video-card reveal">
+            <div class="video-label">
+              <span>EGODEX</span>
+              <span>HUMAN · UNSEEN</span>
+            </div>
+            <video
+              muted
+              loop
+              playsinline
+              preload="metadata"
+              aria-label="ContactFlow prediction compared with ground truth on EgoDex."
+            >
+              <source src="assets/videos/egodex.mp4" type="video/mp4" />
+            </video>
+            <p>Egocentric generalization</p>
+          </article>
+        </div>
+
+        <p class="video-note reveal">
+          <span aria-hidden="true">●</span>
+          Videos play when visible. Full evaluation and additional examples
+          will accompany the paper release.
+        </p>
+      </section>
+
+      <section class="section resources-section" id="resources">
+        <div class="section-heading reveal">
+          <p class="section-index">03 / Release</p>
+          <h2>Resources are<br />on the way.</h2>
+          <p>
+            This is the official release repository. We will update it with the
+            paper, implementation, checkpoints, and processing tools as they
+            become available.
+          </p>
+        </div>
+
+        <div class="resource-list reveal">
+          <a
+            href="https://github.com/rpl-bonn/contactflow"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <span class="resource-id">01</span>
+            <span>
+              <strong>Repository</strong>
+              <small>Project page source and release updates</small>
+            </span>
+            <span class="resource-status live">Live ↗</span>
+          </a>
+          <div>
+            <span class="resource-id">02</span>
+            <span>
+              <strong>Paper</strong>
+              <small>CoRL 2026 manuscript and supplement</small>
+            </span>
+            <span class="resource-status">Coming soon</span>
+          </div>
+          <div>
+            <span class="resource-id">03</span>
+            <span>
+              <strong>Code &amp; models</strong>
+              <small>Training, inference, and checkpoints</small>
+            </span>
+            <span class="resource-status">Under construction</span>
+          </div>
+          <div>
+            <span class="resource-id">04</span>
+            <span>
+              <strong>Data tools</strong>
+              <small>ContactFlow extraction and visualization</small>
+            </span>
+            <span class="resource-status">Planned</span>
+          </div>
+        </div>
+
+        <div class="citation reveal">
+          <div>
+            <span class="status-dot" aria-hidden="true"></span>
+            Citation
+          </div>
+          <code>@inproceedings{contactflow2026,<br />
+&nbsp;&nbsp;title = {ContactFlow: A Video Action Conditioning<br />
+&nbsp;&nbsp;&nbsp;&nbsp;that Transfers Across Embodiments},<br />
+&nbsp;&nbsp;year = {2026}<br />
+}</code>
+          <p>Complete author and venue metadata will be added after review.</p>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <a class="brand footer-brand" href="#top">
+        <span class="brand-mark" aria-hidden="true">
+          <span></span><span></span><span></span>
+        </span>
+        <span>ContactFlow</span>
+      </a>
+      <p>
+        An embodiment-agnostic action interface for video world models.
+      </p>
+      <div>
+        <a href="https://github.com/rpl-bonn/contactflow">GitHub ↗</a>
+        <span>© <span id="year">2026</span> RPL Bonn</span>
+      </div>
+    </footer>
+  </body>
+</html>
