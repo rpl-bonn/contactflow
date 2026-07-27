@@ -214,8 +214,8 @@
         <div class="video-grid">
           <article class="video-card reveal">
             <div class="video-label">
-              <span>DROID</span>
-              <span>ROBOT · 14B ALL-MIX · 24.16 dB</span>
+              <span>TACO</span>
+              <span>HUMAN · 14B HUMAN-ONLY · 28.09 dB</span>
             </div>
             <div class="result-pair">
               <div class="result-pane result-pane-ours">
@@ -225,10 +225,10 @@
                   loop
                   playsinline
                   preload="metadata"
-                  poster="assets/images/results/droid-ours.jpg"
-                  aria-label="Our ContactFlow model generation on DROID."
+                  poster="assets/images/results/taco-ours.jpg"
+                  aria-label="Our ContactFlow model generation on TACO."
                 >
-                  <source src="assets/videos/droid-ours.mp4" type="video/mp4" />
+                  <source src="assets/videos/taco-ours.mp4" type="video/mp4" />
                 </video>
               </div>
               <div class="result-pane">
@@ -238,23 +238,23 @@
                   loop
                   playsinline
                   preload="metadata"
-                  poster="assets/images/results/droid-ground-truth.jpg"
-                  aria-label="Matching DROID ground-truth video."
+                  poster="assets/images/results/taco-ground-truth.jpg"
+                  aria-label="Matching TACO ground-truth video."
                 >
                   <source
-                    src="assets/videos/droid-ground-truth.mp4"
+                    src="assets/videos/taco-ground-truth.mp4"
                     type="video/mp4"
                   />
                 </video>
               </div>
             </div>
-            <p>High-fidelity prediction of a real robot interaction.</p>
+            <p>Close-up bimanual interaction with clear object motion.</p>
           </article>
 
           <article class="video-card reveal">
             <div class="video-label">
-              <span>GENIESIM</span>
-              <span>SIMULATION · 14B HUMAN-ONLY · 27.91 dB</span>
+              <span>EGODEX</span>
+              <span>HUMAN · 14B HUMAN-ONLY · 23.74 dB</span>
             </div>
             <div class="result-pair">
               <div class="result-pane result-pane-ours">
@@ -264,11 +264,11 @@
                   loop
                   playsinline
                   preload="metadata"
-                  poster="assets/images/results/geniesim-ours.jpg"
-                  aria-label="Our ContactFlow model generation on GenieSim."
+                  poster="assets/images/results/egodex-ours.jpg"
+                  aria-label="Our ContactFlow model generation on EgoDex."
                 >
                   <source
-                    src="assets/videos/geniesim-ours.mp4"
+                    src="assets/videos/egodex-ours.mp4"
                     type="video/mp4"
                   />
                 </video>
@@ -280,17 +280,59 @@
                   loop
                   playsinline
                   preload="metadata"
-                  poster="assets/images/results/geniesim-ground-truth.jpg"
-                  aria-label="Matching GenieSim ground-truth video."
+                  poster="assets/images/results/egodex-ground-truth.jpg"
+                  aria-label="Matching EgoDex ground-truth video."
                 >
                   <source
-                    src="assets/videos/geniesim-ground-truth.mp4"
+                    src="assets/videos/egodex-ground-truth.mp4"
                     type="video/mp4"
                   />
                 </video>
               </div>
             </div>
-            <p>Contact-conditioned transfer from human-only training to simulation.</p>
+            <p>Egocentric interaction with a clearly visible manipulated object.</p>
+          </article>
+
+          <article class="video-card reveal">
+            <div class="video-label">
+              <span>AGIBOT</span>
+              <span>ROBOT · 14B HUMAN-ONLY · 20.44 dB</span>
+            </div>
+            <div class="result-pair">
+              <div class="result-pane result-pane-ours">
+                <span class="result-role">Our ContactFlow generation</span>
+                <video
+                  muted
+                  loop
+                  playsinline
+                  preload="metadata"
+                  poster="assets/images/results/agibot-ours.jpg"
+                  aria-label="Our ContactFlow model generation on AgiBot."
+                >
+                  <source
+                    src="assets/videos/agibot-ours.mp4"
+                    type="video/mp4"
+                  />
+                </video>
+              </div>
+              <div class="result-pane">
+                <span class="result-role">Ground truth</span>
+                <video
+                  muted
+                  loop
+                  playsinline
+                  preload="metadata"
+                  poster="assets/images/results/agibot-ground-truth.jpg"
+                  aria-label="Matching AgiBot ground-truth video."
+                >
+                  <source
+                    src="assets/videos/agibot-ground-truth.mp4"
+                    type="video/mp4"
+                  />
+                </video>
+              </div>
+            </div>
+            <p>Cross-embodiment robot interaction in a cluttered real scene.</p>
           </article>
 
           <article class="video-card reveal">
