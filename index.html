@@ -95,7 +95,7 @@
         <div class="hero-media">
           <div class="media-topline">
             <span>CONTACTFLOW CONDITION</span>
-            <span>49 FRAMES · 8 FPS</span>
+            <span>REAL OBJECT · 3D TRAJECTORIES</span>
           </div>
           <video
             muted
@@ -103,7 +103,7 @@
             playsinline
             autoplay
             preload="metadata"
-            aria-label="ContactFlow trajectories visualized over a human-object interaction."
+            aria-label="Colored 3D ContactFlow trajectories visualized around a real cube."
           >
             <source
               src="assets/videos/contactflow-condition.mp4"
@@ -112,7 +112,8 @@
           </video>
           <div class="media-caption">
             <span class="trace-key"></span>
-            Future contact trajectories on the interacting hands and objects.
+            ContactFlow specifies where the object will be contacted and how it
+            will move.
           </div>
         </div>
       </section>
@@ -214,7 +215,7 @@
           <article class="video-card reveal">
             <div class="video-label">
               <span>DROID</span>
-              <span>ROBOT · 14B ALL-MIX · 22.75 dB</span>
+              <span>ROBOT · 14B ALL-MIX · 24.16 dB</span>
             </div>
             <div class="result-pair">
               <div class="result-pane result-pane-ours">
@@ -224,6 +225,7 @@
                   loop
                   playsinline
                   preload="metadata"
+                  poster="assets/images/results/droid-ours.jpg"
                   aria-label="Our ContactFlow model generation on DROID."
                 >
                   <source src="assets/videos/droid-ours.mp4" type="video/mp4" />
@@ -236,6 +238,7 @@
                   loop
                   playsinline
                   preload="metadata"
+                  poster="assets/images/results/droid-ground-truth.jpg"
                   aria-label="Matching DROID ground-truth video."
                 >
                   <source
@@ -245,13 +248,13 @@
                 </video>
               </div>
             </div>
-            <p>Real robot manipulation with visible arm and object motion.</p>
+            <p>High-fidelity prediction of a real robot interaction.</p>
           </article>
 
           <article class="video-card reveal">
             <div class="video-label">
-              <span>AGIBOT</span>
-              <span>UNSEEN ROBOT · 14B HUMAN-ONLY · 21.44 dB</span>
+              <span>GENIESIM</span>
+              <span>SIMULATION · 14B HUMAN-ONLY · 27.91 dB</span>
             </div>
             <div class="result-pair">
               <div class="result-pane result-pane-ours">
@@ -261,9 +264,13 @@
                   loop
                   playsinline
                   preload="metadata"
-                  aria-label="Our ContactFlow model generation on AgiBot."
+                  poster="assets/images/results/geniesim-ours.jpg"
+                  aria-label="Our ContactFlow model generation on GenieSim."
                 >
-                  <source src="assets/videos/agibot-ours.mp4" type="video/mp4" />
+                  <source
+                    src="assets/videos/geniesim-ours.mp4"
+                    type="video/mp4"
+                  />
                 </video>
               </div>
               <div class="result-pane">
@@ -273,22 +280,23 @@
                   loop
                   playsinline
                   preload="metadata"
-                  aria-label="Matching AgiBot ground-truth video."
+                  poster="assets/images/results/geniesim-ground-truth.jpg"
+                  aria-label="Matching GenieSim ground-truth video."
                 >
                   <source
-                    src="assets/videos/agibot-ground-truth.mp4"
+                    src="assets/videos/geniesim-ground-truth.mp4"
                     type="video/mp4"
                   />
                 </video>
               </div>
             </div>
-            <p>Transfer from human-only training to an unseen robot embodiment.</p>
+            <p>Contact-conditioned transfer from human-only training to simulation.</p>
           </article>
 
           <article class="video-card reveal">
             <div class="video-label">
-              <span>TACO</span>
-              <span>HUMAN · 14B HUMAN-ONLY · 29.07 dB</span>
+              <span>TASTEROB</span>
+              <span>HUMAN · 14B HUMAN-ONLY · 28.89 dB</span>
             </div>
             <div class="result-pair">
               <div class="result-pane result-pane-ours">
@@ -298,9 +306,13 @@
                   loop
                   playsinline
                   preload="metadata"
-                  aria-label="Our ContactFlow model generation on TACO."
+                  poster="assets/images/results/tasterob-ours.jpg"
+                  aria-label="Our ContactFlow model generation on TasteRob."
                 >
-                  <source src="assets/videos/taco-ours.mp4" type="video/mp4" />
+                  <source
+                    src="assets/videos/tasterob-ours.mp4"
+                    type="video/mp4"
+                  />
                 </video>
               </div>
               <div class="result-pane">
@@ -310,22 +322,23 @@
                   loop
                   playsinline
                   preload="metadata"
-                  aria-label="Matching TACO ground-truth video."
+                  poster="assets/images/results/tasterob-ground-truth.jpg"
+                  aria-label="Matching TasteRob ground-truth video."
                 >
                   <source
-                    src="assets/videos/taco-ground-truth.mp4"
+                    src="assets/videos/tasterob-ground-truth.mp4"
                     type="video/mp4"
                   />
                 </video>
               </div>
             </div>
-            <p>Held-out human hand interaction in a cluttered real scene.</p>
+            <p>High-quality held-out human interaction in a real kitchen scene.</p>
           </article>
 
           <article class="video-card reveal">
             <div class="video-label">
               <span>OAKINK</span>
-              <span>HUMAN · 14B HUMAN-ONLY · 29.93 dB</span>
+              <span>HUMAN · 14B HUMAN-ONLY · 29.72 dB</span>
             </div>
             <div class="result-pair">
               <div class="result-pane result-pane-ours">
@@ -335,6 +348,7 @@
                   loop
                   playsinline
                   preload="metadata"
+                  poster="assets/images/results/oakink-ours.jpg"
                   aria-label="Our ContactFlow model generation on OakInk."
                 >
                   <source src="assets/videos/oakink-ours.mp4" type="video/mp4" />
@@ -347,6 +361,7 @@
                   loop
                   playsinline
                   preload="metadata"
+                  poster="assets/images/results/oakink-ground-truth.jpg"
                   aria-label="Matching OakInk ground-truth video."
                 >
                   <source
@@ -356,7 +371,7 @@
                 </video>
               </div>
             </div>
-            <p>Highest-quality held-out human interaction selected for the paper.</p>
+            <p>Clear held-out tool interaction selected for the paper.</p>
           </article>
         </div>
 

@@ -8,17 +8,16 @@ composite at commit `3f931a1883f3a900a0663cfe5a1e364f97b34b2c`.
 
 | Dataset | Our full-resolution rollout | Matching ground-truth source | Model / PSNR |
 |---|---|---|---|
-| DROID | `world_model_rollouts_6s_14b/droid/11_droid_14B-allmix_psnr22.75.mp4` | `world_model_composites_6s/droid/08_droid_14B-allmix_composite.mp4` | 14B all-mix / 22.75 dB |
-| AgiBot | `world_model_rollouts_6s_14b/agibot/13_agibot_14B-human7k_psnr21.44.mp4` | `world_model_composites_6s/agibot/09_agibot_14B-human7k_composite.mp4` | 14B human-only / 21.44 dB |
-| TACO | `world_model_rollouts_6s_14b/taco/04_taco_14B-human7k_psnr29.07.mp4` | `world_model_composites_6s/taco/03_taco_14B-human7k_composite.mp4` | 14B human-only / 29.07 dB |
-| OakInk | `world_model_rollouts_6s_14b/oakink/07_oakink_14B-human7k_psnr29.93.mp4` | `world_model_composites_6s/oakink/05_oakink_14B-human7k_composite.mp4` | 14B human-only / 29.93 dB |
+| DROID | `world_model_rollouts_6s_14b/droid/10_droid_14B-allmix_psnr24.16.mp4` | `world_model_composites_6s/droid/07_droid_14B-allmix_composite.mp4` | 14B all-mix / 24.16 dB |
+| GenieSim | `world_model_rollouts_6s_14b/geniesim/16_geniesim_14B-human7k_psnr27.91.mp4` | `world_model_composites_6s/geniesim/11_geniesim_14B-human7k_composite.mp4` | 14B human-only / 27.91 dB |
+| TasteRob | `world_model_rollouts_6s_14b/tasterob/20_tasterob_14B-human7k_psnr28.89.mp4` | `world_model_composites_6s/tasterob/14_tasterob_14B-human7k_composite.mp4` | 14B human-only / 28.89 dB |
+| OakInk | `world_model_rollouts_6s_14b/oakink/08_oakink_14B-human7k_psnr29.72.mp4` | `world_model_composites_6s/oakink/06_oakink_14B-human7k_composite.mp4` | 14B human-only / 29.72 dB |
 
 The two panes in every source composite were verified against the named
 full-resolution rollout before extraction. The public page labels the model
 generation and ground truth directly and synchronizes their playback.
 
-`contactflow-condition.mp4` is a representative 49-frame, 8 fps ContactFlow
-conditioning visualization copied from the project-owned OakInk conditioning
-overlay:
+`contactflow-condition.mp4` is a robot-object ContactFlow conditioning
+visualization copied from the project-owned real-world experiment:
 
-`oscar_benchmark/oscar_bench/cond_overlays/oakink/scene_01__A001__seq__0b3d183d6b2e90eefd66__2023-04-27-20-38-16__pw0000__seg000__view_allocentric_right.hands_overlay.mp4`
+`real_world_experiments/outputs/contact_flow_conditioning_ep43/overlay_zoom.mp4`

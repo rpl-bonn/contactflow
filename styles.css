@@ -389,8 +389,10 @@ h1 span::after {
 }
 
 .hero-media > video {
+  aspect-ratio: 1;
   background: #080907;
   cursor: pointer;
+  object-fit: contain;
 }
 
 .media-caption {
