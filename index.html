@@ -16,7 +16,7 @@
     />
     <meta
       property="og:image"
-      content="https://rpl-bonn.github.io/contactflow/assets/images/sim-to-real-contactflow.png"
+      content="https://rpl-bonn.github.io/contactflow/assets/images/project-preview.jpg"
     />
     <meta property="og:url" content="https://rpl-bonn.github.io/contactflow/" />
     <meta name="twitter:card" content="summary_large_image" />
@@ -94,16 +94,25 @@
 
         <div class="hero-media">
           <div class="media-topline">
-            <span>SIM-TO-REAL CONTACTFLOW</span>
-            <span>SHARED 3D CONTACT TRAJECTORIES</span>
+            <span>CONTACTFLOW CONDITION</span>
+            <span>49 FRAMES · 8 FPS</span>
           </div>
-          <img
-            src="assets/images/sim-to-real-contactflow.png"
-            alt="ContactFlow trajectories shown in simulation and mapped onto the corresponding real object."
-          />
+          <video
+            muted
+            loop
+            playsinline
+            autoplay
+            preload="metadata"
+            aria-label="ContactFlow trajectories visualized over a human-object interaction."
+          >
+            <source
+              src="assets/videos/contactflow-condition.mp4"
+              type="video/mp4"
+            />
+          </video>
           <div class="media-caption">
             <span class="trace-key"></span>
-            One contact-centric action transfers from simulation to the real scene.
+            Future contact trajectories on the interacting hands and objects.
           </div>
         </div>
       </section>
@@ -196,8 +205,8 @@
           <h2>Imagine before<br />you act.</h2>
           <p>
             The model receives an initial scene and a ContactFlow condition,
-            then predicts the visual outcome. Each six-second example compares
-            the predicted rollout with the observed future.
+            then predicts the visual outcome. Each six-second result explicitly
+            pairs our generated future with its matching ground truth.
           </p>
         </div>
 
@@ -205,77 +214,157 @@
           <article class="video-card reveal">
             <div class="video-label">
               <span>DROID</span>
-              <span>ROBOT · IN-DOMAIN</span>
+              <span>ROBOT · 14B ALL-MIX · 22.75 dB</span>
             </div>
-            <video
-              muted
-              loop
-              playsinline
-              preload="metadata"
-              poster="assets/images/droid-video-poster.jpg"
-              aria-label="ContactFlow prediction compared with ground truth on DROID."
-            >
-              <source src="assets/videos/droid.mp4" type="video/mp4" />
-            </video>
-            <p>Real robot manipulation</p>
+            <div class="result-pair">
+              <div class="result-pane result-pane-ours">
+                <span class="result-role">Our ContactFlow generation</span>
+                <video
+                  muted
+                  loop
+                  playsinline
+                  preload="metadata"
+                  aria-label="Our ContactFlow model generation on DROID."
+                >
+                  <source src="assets/videos/droid-ours.mp4" type="video/mp4" />
+                </video>
+              </div>
+              <div class="result-pane">
+                <span class="result-role">Ground truth</span>
+                <video
+                  muted
+                  loop
+                  playsinline
+                  preload="metadata"
+                  aria-label="Matching DROID ground-truth video."
+                >
+                  <source
+                    src="assets/videos/droid-ground-truth.mp4"
+                    type="video/mp4"
+                  />
+                </video>
+              </div>
+            </div>
+            <p>Real robot manipulation with visible arm and object motion.</p>
           </article>
 
           <article class="video-card reveal">
             <div class="video-label">
               <span>AGIBOT</span>
-              <span>ROBOT · UNSEEN</span>
+              <span>UNSEEN ROBOT · 14B HUMAN-ONLY · 21.44 dB</span>
             </div>
-            <video
-              muted
-              loop
-              playsinline
-              preload="metadata"
-              aria-label="ContactFlow prediction compared with ground truth on AgiBot."
-            >
-              <source src="assets/videos/agibot.mp4" type="video/mp4" />
-            </video>
-            <p>Transfer to an unseen robot embodiment</p>
+            <div class="result-pair">
+              <div class="result-pane result-pane-ours">
+                <span class="result-role">Our ContactFlow generation</span>
+                <video
+                  muted
+                  loop
+                  playsinline
+                  preload="metadata"
+                  aria-label="Our ContactFlow model generation on AgiBot."
+                >
+                  <source src="assets/videos/agibot-ours.mp4" type="video/mp4" />
+                </video>
+              </div>
+              <div class="result-pane">
+                <span class="result-role">Ground truth</span>
+                <video
+                  muted
+                  loop
+                  playsinline
+                  preload="metadata"
+                  aria-label="Matching AgiBot ground-truth video."
+                >
+                  <source
+                    src="assets/videos/agibot-ground-truth.mp4"
+                    type="video/mp4"
+                  />
+                </video>
+              </div>
+            </div>
+            <p>Transfer from human-only training to an unseen robot embodiment.</p>
           </article>
 
           <article class="video-card reveal">
             <div class="video-label">
               <span>TACO</span>
-              <span>HUMAN · HELD-OUT</span>
+              <span>HUMAN · 14B HUMAN-ONLY · 29.07 dB</span>
             </div>
-            <video
-              muted
-              loop
-              playsinline
-              preload="metadata"
-              aria-label="ContactFlow prediction compared with ground truth on TACO."
-            >
-              <source src="assets/videos/taco.mp4" type="video/mp4" />
-            </video>
-            <p>Human hand interaction</p>
+            <div class="result-pair">
+              <div class="result-pane result-pane-ours">
+                <span class="result-role">Our ContactFlow generation</span>
+                <video
+                  muted
+                  loop
+                  playsinline
+                  preload="metadata"
+                  aria-label="Our ContactFlow model generation on TACO."
+                >
+                  <source src="assets/videos/taco-ours.mp4" type="video/mp4" />
+                </video>
+              </div>
+              <div class="result-pane">
+                <span class="result-role">Ground truth</span>
+                <video
+                  muted
+                  loop
+                  playsinline
+                  preload="metadata"
+                  aria-label="Matching TACO ground-truth video."
+                >
+                  <source
+                    src="assets/videos/taco-ground-truth.mp4"
+                    type="video/mp4"
+                  />
+                </video>
+              </div>
+            </div>
+            <p>Held-out human hand interaction in a cluttered real scene.</p>
           </article>
 
           <article class="video-card reveal">
             <div class="video-label">
-              <span>EGODEX</span>
-              <span>HUMAN · UNSEEN</span>
+              <span>OAKINK</span>
+              <span>HUMAN · 14B HUMAN-ONLY · 29.93 dB</span>
             </div>
-            <video
-              muted
-              loop
-              playsinline
-              preload="metadata"
-              aria-label="ContactFlow prediction compared with ground truth on EgoDex."
-            >
-              <source src="assets/videos/egodex.mp4" type="video/mp4" />
-            </video>
-            <p>Egocentric generalization</p>
+            <div class="result-pair">
+              <div class="result-pane result-pane-ours">
+                <span class="result-role">Our ContactFlow generation</span>
+                <video
+                  muted
+                  loop
+                  playsinline
+                  preload="metadata"
+                  aria-label="Our ContactFlow model generation on OakInk."
+                >
+                  <source src="assets/videos/oakink-ours.mp4" type="video/mp4" />
+                </video>
+              </div>
+              <div class="result-pane">
+                <span class="result-role">Ground truth</span>
+                <video
+                  muted
+                  loop
+                  playsinline
+                  preload="metadata"
+                  aria-label="Matching OakInk ground-truth video."
+                >
+                  <source
+                    src="assets/videos/oakink-ground-truth.mp4"
+                    type="video/mp4"
+                  />
+                </video>
+              </div>
+            </div>
+            <p>Highest-quality held-out human interaction selected for the paper.</p>
           </article>
         </div>
 
         <p class="video-note reveal">
           <span aria-hidden="true">●</span>
-          Genuine 49-frame paper supplement rollouts from our 14B ContactFlow
-          models. Left: prediction. Right: ground truth.
+          Genuine 49-frame paper results. Every pair is synchronized and
+          explicitly labeled—our generated rollout first, matching ground truth
+          second.
         </p>
       </section>
 
