@@ -17,13 +17,3 @@ they become available.
 ## Project page
 
 <https://rpl-bonn.github.io/contactflow/>
-
-## Local preview
-
-The page is static and has no build dependencies:
-
-```bash
-python3 -m http.server 8000
-```
-
-Then open <http://localhost:8000>.

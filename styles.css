@@ -125,6 +125,36 @@ nav a:hover {
   text-underline-offset: 4px;
 }
 
+.construction-banner {
+  display: flex;
+  gap: clamp(2rem, 5vw, 6rem);
+  align-items: center;
+  justify-content: center;
+  min-height: clamp(118px, 12vw, 190px);
+  padding: 1.25rem 4vw;
+  overflow: hidden;
+  border-bottom: 2px solid var(--ink);
+  background: var(--signal);
+  color: var(--ink);
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.construction-banner span {
+  flex: 0 0 auto;
+  font-size: clamp(3.2rem, 7.4vw, 8.5rem);
+  letter-spacing: -0.075em;
+  line-height: 0.78;
+  white-space: nowrap;
+}
+
+.construction-banner span:not(:first-child) {
+  font-family: var(--mono);
+  font-size: clamp(0.7rem, 1vw, 1rem);
+  font-weight: 500;
+  letter-spacing: 0.08em;
+}
+
 .nav-github {
   padding: 0.65rem 0.9rem;
   border: 1px solid var(--ink);
@@ -247,7 +277,7 @@ h1 span::after {
 
 .hero-media {
   position: relative;
-  min-height: 420px;
+  min-height: 0;
   padding: 1rem;
   border: 1px solid var(--ink);
   background: var(--ink);
@@ -285,7 +315,7 @@ h1 span::after {
 
 .hero-media img {
   width: 100%;
-  min-height: 330px;
+  aspect-ratio: 16 / 9;
   border: 1px solid #44463e;
   object-fit: cover;
   image-rendering: auto;
@@ -303,7 +333,7 @@ h1 span::after {
   width: 18px;
   height: 4px;
   border-radius: 99px;
-  background: #ffec00;
+  background: #0788ff;
 }
 
 .statement {
@@ -393,71 +423,10 @@ h1 span::after {
 }
 
 .embodiment-icon {
-  position: relative;
-  width: 115px;
-  height: 115px;
+  width: 150px;
+  height: 150px;
   margin: 4rem auto 3rem;
-  border: 1px solid var(--ink);
-  border-radius: 50%;
-}
-
-.embodiment-icon::before,
-.embodiment-icon::after {
-  position: absolute;
-  border-radius: 99px;
-  background: var(--ink);
-  content: "";
-}
-
-.hand-icon::before {
-  top: 31px;
-  left: 28px;
-  width: 56px;
-  height: 6px;
-  box-shadow: 0 14px 0 var(--ink), 0 28px 0 var(--ink);
-  transform: rotate(-22deg);
-}
-
-.hand-icon::after {
-  right: 24px;
-  bottom: 22px;
-  width: 8px;
-  height: 8px;
-  background: var(--orange);
-  box-shadow: 0 0 0 6px rgba(255, 103, 55, 0.2);
-}
-
-.gripper-icon::before {
-  top: 27px;
-  left: 52px;
-  width: 10px;
-  height: 40px;
-}
-
-.gripper-icon::after {
-  bottom: 25px;
-  left: 30px;
-  width: 18px;
-  height: 7px;
-  box-shadow: 36px 0 0 var(--ink);
-}
-
-.dexterous-icon::before {
-  top: 28px;
-  left: 55px;
-  width: 5px;
-  height: 55px;
-  box-shadow: -17px 6px 0 var(--ink), 17px 6px 0 var(--ink);
-  transform: rotate(12deg);
-}
-
-.dexterous-icon::after {
-  top: 52px;
-  left: 52px;
-  width: 10px;
-  height: 10px;
-  background: var(--signal-strong);
-  box-shadow: 0 0 0 7px rgba(223, 255, 0, 0.28);
+  object-fit: contain;
 }
 
 .pipeline {
@@ -717,6 +686,19 @@ footer > div {
     padding-top: 6rem;
   }
 
+  .construction-banner {
+    min-height: 105px;
+    justify-content: flex-start;
+  }
+
+  .construction-banner span {
+    font-size: clamp(3.1rem, 16vw, 5rem);
+  }
+
+  .construction-banner span:not(:first-child) {
+    display: none;
+  }
+
   .hero-media {
     min-height: auto;
     transform: none;
@@ -736,6 +718,22 @@ footer > div {
 
   .citation p {
     grid-column: 2;
+  }
+}
+
+@media (max-width: 600px) {
+  .construction-banner {
+    min-height: 148px;
+    justify-content: center;
+    padding: 0.9rem 3vw;
+  }
+
+  .construction-banner span:first-child {
+    width: 100%;
+    font-size: clamp(2.8rem, 13vw, 4rem);
+    line-height: 0.82;
+    text-align: center;
+    white-space: normal;
   }
 }
 
@@ -797,6 +795,8 @@ footer > div {
   }
 
   .embodiment-icon {
+    width: 135px;
+    height: 135px;
     margin-top: 2rem;
     margin-bottom: 2rem;
   }

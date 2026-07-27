@@ -16,7 +16,7 @@
     />
     <meta
       property="og:image"
-      content="https://rpl-bonn.github.io/contactflow/assets/images/droid-contact-flow.jpg"
+      content="https://rpl-bonn.github.io/contactflow/assets/images/contactflow-condition.png"
     />
     <meta property="og:url" content="https://rpl-bonn.github.io/contactflow/" />
     <meta name="twitter:card" content="summary_large_image" />
@@ -54,6 +54,12 @@
       </nav>
     </header>
 
+    <aside class="construction-banner" aria-label="Website status">
+      <span>Under construction</span>
+      <span aria-hidden="true">Official project page</span>
+      <span aria-hidden="true">Under construction</span>
+    </aside>
+
     <main id="main">
       <section class="hero" id="top">
         <div class="hero-copy">
@@ -88,16 +94,16 @@
 
         <div class="hero-media">
           <div class="media-topline">
-            <span>CONTACT CONDITION</span>
-            <span>DROID · 49 FRAMES</span>
+            <span>CONTACTFLOW CONDITION</span>
+            <span>REAL SCENE · 3D TRAJECTORIES</span>
           </div>
           <img
-            src="assets/images/droid-contact-flow.jpg"
-            alt="A sequence of robot manipulation frames with yellow contact-flow traces."
+            src="assets/images/contactflow-condition.png"
+            alt="A full-resolution real robot scene with blue 3D ContactFlow trajectories over the target object."
           />
           <div class="media-caption">
             <span class="trace-key"></span>
-            Contact points trace the intended interaction—not the embodiment.
+            The input condition specifies where contact acts and how it moves.
           </div>
         </div>
       </section>
@@ -124,19 +130,34 @@
         <div class="embodiment-grid reveal">
           <article>
             <span class="card-number">A</span>
-            <div class="embodiment-icon hand-icon" aria-hidden="true"></div>
+            <img
+              class="embodiment-icon"
+              src="assets/icons/human-hand.svg"
+              alt=""
+              aria-hidden="true"
+            />
             <h3>Human hands</h3>
             <p>Learn interaction structure from abundant human demonstrations.</p>
           </article>
           <article>
             <span class="card-number">B</span>
-            <div class="embodiment-icon gripper-icon" aria-hidden="true"></div>
+            <img
+              class="embodiment-icon"
+              src="assets/icons/robot-gripper.svg"
+              alt=""
+              aria-hidden="true"
+            />
             <h3>Robot grippers</h3>
             <p>Express robot plans using the same contact-centric signal.</p>
           </article>
           <article>
             <span class="card-number">C</span>
-            <div class="embodiment-icon dexterous-icon" aria-hidden="true"></div>
+            <img
+              class="embodiment-icon"
+              src="assets/icons/new-embodiment.svg"
+              alt=""
+              aria-hidden="true"
+            />
             <h3>New embodiments</h3>
             <p>Transfer action conditioning without copying actor geometry.</p>
           </article>
@@ -191,7 +212,7 @@
               loop
               playsinline
               preload="metadata"
-              poster="assets/images/droid-rollout.jpg"
+              poster="assets/images/droid-video-poster.jpg"
               aria-label="ContactFlow prediction compared with ground truth on DROID."
             >
               <source src="assets/videos/droid.mp4" type="video/mp4" />
@@ -201,7 +222,7 @@
 
           <article class="video-card reveal">
             <div class="video-label">
-              <span>RLBENCH</span>
+              <span>AGIBOT</span>
               <span>ROBOT · UNSEEN</span>
             </div>
             <video
@@ -209,11 +230,11 @@
               loop
               playsinline
               preload="metadata"
-              aria-label="ContactFlow prediction compared with ground truth on RLBench."
+              aria-label="ContactFlow prediction compared with ground truth on AgiBot."
             >
-              <source src="assets/videos/rlbench.mp4" type="video/mp4" />
+              <source src="assets/videos/agibot.mp4" type="video/mp4" />
             </video>
-            <p>Transfer to simulation</p>
+            <p>Transfer to an unseen robot embodiment</p>
           </article>
 
           <article class="video-card reveal">
@@ -253,8 +274,8 @@
 
         <p class="video-note reveal">
           <span aria-hidden="true">●</span>
-          Videos play when visible. Full evaluation and additional examples
-          will accompany the paper release.
+          Genuine 49-frame CoRL supplement rollouts from our 14B ContactFlow
+          models. Left: prediction. Right: ground truth.
         </p>
       </section>
 
