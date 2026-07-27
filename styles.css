@@ -343,7 +343,9 @@ h1 span::after {
 
 .hero-media {
   position: relative;
+  width: min(100%, 500px);
   min-height: 0;
+  justify-self: center;
   padding: 1rem;
   border: 1px solid var(--ink);
   background: var(--ink);
