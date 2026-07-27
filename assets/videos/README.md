@@ -17,7 +17,9 @@ The two panes in every source composite were verified against the named
 full-resolution rollout before extraction. The public page labels the model
 generation and ground truth directly and synchronizes their playback.
 
-`contactflow-condition.mp4` is a robot-object ContactFlow conditioning
-visualization copied from the project-owned real-world experiment:
-
-`real_world_experiments/outputs/contact_flow_conditioning_ep43/overlay_zoom.mp4`
+`contactflow-condition.mp4` is the selected 50%-speed rainbow future-flow
+visualization derived from the exact OakInk training pair
+`scene_01__A007__seq__0b666c7b299d875e5f1e__2023-04-21-11-38-16__pw0015__seg000__view_allocentric_right`.
+Red marks the current contact surface; orange through violet show the next four
+frames. The temporal coloring changes only the visualization: the projected
+ContactFlow geometry and its registration to the RGB sequence are preserved.
