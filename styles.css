@@ -126,31 +126,97 @@ nav a:hover {
 }
 
 .construction-banner {
-  display: flex;
-  gap: clamp(2rem, 5vw, 6rem);
-  align-items: center;
-  justify-content: center;
-  min-height: clamp(118px, 12vw, 190px);
-  padding: 1.25rem 4vw;
+  display: grid;
+  min-height: clamp(190px, 16vw, 260px);
+  place-items: center;
+  padding: clamp(1.4rem, 3vw, 2.6rem) 4vw;
   overflow: hidden;
   border-bottom: 2px solid var(--ink);
-  background: var(--signal);
+  background: repeating-linear-gradient(
+    -45deg,
+    var(--signal) 0 28px,
+    var(--signal) 28px 42px,
+    var(--ink) 42px 70px
+  );
   color: var(--ink);
-  font-weight: 800;
   text-transform: uppercase;
 }
 
-.construction-banner span {
+.construction-sign {
+  position: relative;
+  display: flex;
+  gap: clamp(1rem, 2.5vw, 2.25rem);
+  align-items: center;
+  width: min(92vw, 980px);
+  padding: clamp(1rem, 2vw, 1.55rem) clamp(1.2rem, 3vw, 2.5rem);
+  border: clamp(4px, 0.45vw, 7px) solid var(--ink);
+  background: #ff9d22;
+  box-shadow: 12px 12px 0 var(--ink);
+  transform: rotate(-1.2deg);
+}
+
+.construction-sign::before,
+.construction-sign::after {
+  position: absolute;
+  width: 11px;
+  height: 11px;
+  border: 2px solid var(--ink);
+  border-radius: 50%;
+  background: #d7d7c9;
+  content: "";
+}
+
+.construction-sign::before {
+  top: 10px;
+  left: 10px;
+}
+
+.construction-sign::after {
+  right: 10px;
+  bottom: 10px;
+}
+
+.construction-symbol {
+  position: relative;
   flex: 0 0 auto;
-  font-size: clamp(3.2rem, 7.4vw, 8.5rem);
+  width: clamp(62px, 8vw, 105px);
+  aspect-ratio: 1;
+  border: 5px solid var(--ink);
+  border-radius: 8px;
+  background: var(--signal);
+  transform: rotate(45deg);
+}
+
+.construction-symbol::after {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  font-size: clamp(3rem, 6vw, 5rem);
+  font-weight: 800;
+  line-height: 1;
+  content: "!";
+  transform: rotate(-45deg);
+}
+
+.construction-copy {
+  min-width: 0;
+}
+
+.construction-copy strong {
+  display: block;
+  font-size: clamp(2.8rem, 4.8vw, 4.4rem);
+  font-weight: 800;
   letter-spacing: -0.075em;
-  line-height: 0.78;
+  line-height: 0.82;
   white-space: nowrap;
 }
 
-.construction-banner span:not(:first-child) {
+.construction-copy small {
+  display: block;
+  margin-top: 0.7rem;
   font-family: var(--mono);
-  font-size: clamp(0.7rem, 1vw, 1rem);
+  font-size: clamp(0.65rem, 1vw, 0.9rem);
   font-weight: 500;
   letter-spacing: 0.08em;
 }
@@ -686,19 +752,6 @@ footer > div {
     padding-top: 6rem;
   }
 
-  .construction-banner {
-    min-height: 105px;
-    justify-content: flex-start;
-  }
-
-  .construction-banner span {
-    font-size: clamp(3.1rem, 16vw, 5rem);
-  }
-
-  .construction-banner span:not(:first-child) {
-    display: none;
-  }
-
   .hero-media {
     min-height: auto;
     transform: none;
@@ -723,17 +776,34 @@ footer > div {
 
 @media (max-width: 600px) {
   .construction-banner {
-    min-height: 148px;
-    justify-content: center;
-    padding: 0.9rem 3vw;
+    min-height: 190px;
+    padding: 1.2rem 4vw 1.6rem;
   }
 
-  .construction-banner span:first-child {
-    width: 100%;
-    font-size: clamp(2.8rem, 13vw, 4rem);
-    line-height: 0.82;
-    text-align: center;
+  .construction-sign {
+    gap: 1rem;
+    width: 90vw;
+    padding: 1.2rem 1rem;
+    box-shadow: 7px 7px 0 var(--ink);
+    transform: rotate(-1deg);
+  }
+
+  .construction-symbol {
+    width: 58px;
+    border-width: 4px;
+  }
+
+  .construction-copy strong {
+    font-size: clamp(2rem, 8.4vw, 2.5rem);
+    line-height: 0.84;
     white-space: normal;
+  }
+
+  .construction-copy small {
+    max-width: 220px;
+    margin-top: 0.5rem;
+    font-size: 0.54rem;
+    line-height: 1.45;
   }
 }
 
@@ -752,7 +822,7 @@ footer > div {
   }
 
   h1 {
-    font-size: clamp(4rem, 19vw, 7rem);
+    font-size: clamp(3.4rem, 16vw, 6rem);
   }
 
   .hero-media {

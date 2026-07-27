@@ -9,18 +9,18 @@
     />
     <meta name="theme-color" content="#f3ff63" />
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="ContactFlow — Actions through contact" />
+    <meta property="og:title" content="ContactFlow" />
     <meta
       property="og:description"
       content="A video action conditioning that transfers across embodiments."
     />
     <meta
       property="og:image"
-      content="https://rpl-bonn.github.io/contactflow/assets/images/contactflow-condition.png"
+      content="https://rpl-bonn.github.io/contactflow/assets/images/sim-to-real-contactflow.png"
     />
     <meta property="og:url" content="https://rpl-bonn.github.io/contactflow/" />
     <meta name="twitter:card" content="summary_large_image" />
-    <title>ContactFlow — Actions through contact</title>
+    <title>ContactFlow</title>
     <script>
       document.documentElement.classList.add("js");
     </script>
@@ -55,9 +55,13 @@
     </header>
 
     <aside class="construction-banner" aria-label="Website status">
-      <span>Under construction</span>
-      <span aria-hidden="true">Official project page</span>
-      <span aria-hidden="true">Under construction</span>
+      <div class="construction-sign">
+        <span class="construction-symbol" aria-hidden="true"></span>
+        <span class="construction-copy">
+          <strong>Under construction</strong>
+          <small>Official project page · coming soon</small>
+        </span>
+      </div>
     </aside>
 
     <main id="main">
@@ -65,13 +69,9 @@
         <div class="hero-copy">
           <div class="eyebrow">
             <span class="status-dot" aria-hidden="true"></span>
-            CoRL 2026 submission · Project page under construction
+            Paper and resources coming soon
           </div>
-          <h1>
-            Actions,
-            <br />
-            <span>through contact.</span>
-          </h1>
+          <h1>ContactFlow</h1>
           <p class="hero-lede">
             ContactFlow is an embodiment-agnostic action representation that
             describes manipulation through trajectories of 3D contact points—
@@ -94,16 +94,16 @@
 
         <div class="hero-media">
           <div class="media-topline">
-            <span>CONTACTFLOW CONDITION</span>
-            <span>REAL SCENE · 3D TRAJECTORIES</span>
+            <span>SIM-TO-REAL CONTACTFLOW</span>
+            <span>SHARED 3D CONTACT TRAJECTORIES</span>
           </div>
           <img
-            src="assets/images/contactflow-condition.png"
-            alt="A full-resolution real robot scene with blue 3D ContactFlow trajectories over the target object."
+            src="assets/images/sim-to-real-contactflow.png"
+            alt="ContactFlow trajectories shown in simulation and mapped onto the corresponding real object."
           />
           <div class="media-caption">
             <span class="trace-key"></span>
-            The input condition specifies where contact acts and how it moves.
+            One contact-centric action transfers from simulation to the real scene.
           </div>
         </div>
       </section>
@@ -274,7 +274,7 @@
 
         <p class="video-note reveal">
           <span aria-hidden="true">●</span>
-          Genuine 49-frame CoRL supplement rollouts from our 14B ContactFlow
+          Genuine 49-frame paper supplement rollouts from our 14B ContactFlow
           models. Left: prediction. Right: ground truth.
         </p>
       </section>
@@ -307,7 +307,7 @@
             <span class="resource-id">02</span>
             <span>
               <strong>Paper</strong>
-              <small>CoRL 2026 manuscript and supplement</small>
+              <small>Manuscript and supplementary material</small>
             </span>
             <span class="resource-status">Coming soon</span>
           </div>
